@@ -5,12 +5,17 @@
     <ul>
       <li>
         <RouterLink to="/exercices/text-interpolation">
-          Exercice 1 : interpolation de texte
+          Exercice 1 : Interpolation de texte
         </RouterLink>
       </li>
       <li>
         <RouterLink to="/exercices/attribute-binding">
-          Exercice 2 : liaison d’attributs
+          Exercice 2 : Liaison d’attributs
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/exercices/event-binding">
+          Exercice 3 : Gestion des événements
         </RouterLink>
       </li>
     </ul>

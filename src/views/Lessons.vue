@@ -20,7 +20,7 @@
           Cours 5 : Liaison d'attributs
         </RouterLink>
         <RouterLink to="/lessons/event-binding">
-          Cours 6 : liaison d'événements
+          Cours 6 : Gestion des événements
         </RouterLink>
       </li>
     </ul>
