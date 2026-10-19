@@ -14,13 +14,13 @@
           Cours 3 : Syntaxe
         </RouterLink>
         <RouterLink to="/lessons/text-interpolation">
-          Cours 4 : Text interpolation
+          Cours 4 : Interpolation de texte
         </RouterLink>
         <RouterLink to="/lessons/attribute-binding">
-          Cours 5 : Attribute binding
+          Cours 5 : Liaison d'attributs
         </RouterLink>
         <RouterLink to="/lessons/event-binding">
-          Cours 6 : Attribute binding
+          Cours 6 : liaison d'événements
         </RouterLink>
       </li>
     </ul>

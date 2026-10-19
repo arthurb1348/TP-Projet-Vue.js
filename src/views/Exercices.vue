@@ -8,6 +8,11 @@
           Exercice 1 : interpolation de texte
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/exercices/attribute-binding">
+          Exercice 2 : liaison d’attributs
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

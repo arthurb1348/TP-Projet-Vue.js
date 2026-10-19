@@ -18,26 +18,7 @@
 
 <template>
   <section>
-    <h1>Exercice 1: interpolation de texte</h1>
-
-    <p>Livre : {{ unLivre }}</p>
-    <p>En ligne : {{ isOnline }}</p>
-    <p>Nombre : {{ unNombre }}</p>
-    <p>Le double du nombre : {{ unNombre * 2 }}</p>
-
-    <p>Tableau complet : {{ unTableau }}</p>
-    <p>Premier élément : {{ unTableau[0] }}</p>
-
-    <p>Objet complet : {{ unObjet }}</p>
-    <p>Nom : {{ unObjet.name }}</p>
-    <p>Nom avec les crochets : {{ unObjet["name"] }}</p>
-    <p>Téléphone : {{ unObjet.tel }}</p>
-    <p>Résultat de la fonction : {{ fonctionTest() }}</p>
-    <p>Statut : {{ isOnline ? "Coonecté" : "Décoonecté" }}</p>
-    <p>Contenu HTML : {{ duHtml }}</p>
-  </section>
-  <section>
-    <h1>Exercice 1 bis: interpolation de texte</h1>
+    <h1>Exercice 1 : interpolation de texte</h1>
 
     <table>
       <thead>
