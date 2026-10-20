@@ -8,9 +8,9 @@
     function lireMot(event) {
         const texte = event.target.value;
 
-        if (texte === "hello") {
+        if (texte.trim().toLowerCase() === "hello") {
             classeTitre1.value = "maClasseHello";
-        } else if (texte === "world") {
+        } else if (texte.trim().toLowerCase() === "world") {
             classeTitre1.value = "maClasseWorld";
         } else {
             classeTitre1.value = "";

@@ -48,6 +48,14 @@ import { L } from 'vue-router/dist/index-u4XkZVDG.js';
           Cours 8 : Two way binding
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/lessons/conditional-rendering">
+          Cours 9 : Rendu conditionnel
+        </RouterLink>
+      </li>
+      <RouterLink to="/lessons/list-rendering">
+          Cours 10 : List rendering
+        </RouterLink>
     </ul>
   </main>
 </template>

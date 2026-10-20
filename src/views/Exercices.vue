@@ -23,6 +23,11 @@
           Exercice 4 : Dynamic styling
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/exercices/conditional-rendering">
+          Exercice 5 : Rendu conditionnel
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

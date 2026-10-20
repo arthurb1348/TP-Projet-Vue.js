@@ -52,6 +52,14 @@ const router = createRouter({
             component: () => import('../views/lessons/lesson-two-way-binding.vue')
         },
         {
+            path: '/lessons/conditional-rendering',
+            component: () => import('../views/lessons/lesson-conditional-rendering.vue')
+        },
+        {
+            path: '/lessons/list-rendering',
+            component: () => import('../views/lessons/lesson-list-rendering.vue')
+        },
+        {
             path: '/exercices',
             component: () => import('../views/Exercices.vue')
         },
@@ -70,6 +78,10 @@ const router = createRouter({
         {
             path: '/exercices/dynamic-styling',
             component: () => import('../views/exercices/DynamicStyling.vue')
+        },
+        {
+            path: '/exercices/conditional-rendering',
+            component: () => import('../views/exercices/ConditionalRendering.vue')
         },
         {
             path: '/tp',
