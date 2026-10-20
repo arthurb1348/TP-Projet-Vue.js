@@ -53,9 +53,11 @@ import { L } from 'vue-router/dist/index-u4XkZVDG.js';
           Cours 9 : Rendu conditionnel
         </RouterLink>
       </li>
-      <RouterLink to="/lessons/list-rendering">
+      <li>
+        <RouterLink to="/lessons/list-rendering">
           Cours 10 : List rendering
         </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
