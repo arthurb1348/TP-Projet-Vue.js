@@ -18,6 +18,11 @@
           Exercice 3 : Gestion des événements
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/exercices/dynamic-styling">
+          Exercice 4 : Dynamic styling
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

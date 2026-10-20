@@ -44,6 +44,14 @@ const router = createRouter({
             component: () => import('../views/lessons/lesson-event-binding.vue')
         },
         {
+            path: '/lessons/dynamic-styling',
+            component: () => import('../views/lessons/lesson-dynamic-styling.vue')
+        },
+        {
+            path: '/lessons/2-way-binding',
+            component: () => import('../views/lessons/lesson-two-way-binding.vue')
+        },
+        {
             path: '/exercices',
             component: () => import('../views/Exercices.vue')
         },
@@ -58,6 +66,22 @@ const router = createRouter({
         {
             path: '/exercices/event-binding',
             component: () => import('../views/exercices/EventBinding.vue')
+        },
+        {
+            path: '/exercices/dynamic-styling',
+            component: () => import('../views/exercices/DynamicStyling.vue')
+        },
+        {
+            path: '/tp',
+            component: () => import('../views/TP.vue')
+        },
+        {
+            path: '/tp/data-binding',
+            component: () => import('../views/tp/tp-data-binding.vue')
+        },
+        {
+            path: '/tp/dynamic-style',
+            component: () => import('../views/tp/tp-dynamic-style.vue')
         },
         {
             path: '/:pathMatch(.*)*',

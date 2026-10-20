@@ -4,6 +4,7 @@
   <router-link to="/home" class="btn btn-ghost">Home</router-link>
   <router-link to="/exercices" class="btn btn-ghost">Exercices</router-link>
   <router-link to="/lessons" class="btn btn-ghost">Cours</router-link>
+  <router-link to="/tp" class="btn btn-ghost">TP</router-link>
 </div>
 </template>
 

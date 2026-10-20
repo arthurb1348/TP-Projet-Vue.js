@@ -38,6 +38,16 @@ import { L } from 'vue-router/dist/index-u4XkZVDG.js';
           Cours 6 : Gestion des événements
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/lessons/dynamic-styling">
+          Cours 7 : Dynamic styling
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/lessons/2-way-binding">
+          Cours 8 : Two way binding
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
