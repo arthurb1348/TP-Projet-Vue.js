@@ -14,23 +14,7 @@ const router = createRouter({
             alias: '/',
             component: Home
         },
-        // ! Ces routes sont en lazy loading, elle sera chargée uniquement quand on ira sur la page /about
-        {
-            path: '/about',
-            component: () => import('../views/About.vue')
-        },
-        {
-            path: '/contact',
-            component: () => import('../views/Contact.vue')
-        },
-        {
-            path: '/exercices',
-            component: () => import('../views/Exercices.vue')
-        },
-        {
-            path: '/exercices/text-interpolation',
-            component: () => import('../views/exercices/TextInterpolation.vue')
-        },
+        // ! Ces routes sont en lazy loading.
         {
             path: '/lessons',
             component: () => import('../views/Lessons.vue')
@@ -60,12 +44,24 @@ const router = createRouter({
             component: () => import('../views/lessons/lesson-event-binding.vue')
         },
         {
+            path: '/exercices',
+            component: () => import('../views/Exercices.vue')
+        },
+        {
+            path: '/exercices/text-interpolation',
+            component: () => import('../views/exercices/TextInterpolation.vue')
+        },
+        {
             path: '/exercices/attribute-binding',
             component: () => import('../views/exercices/AttributeBinding.vue')
         },
         {
             path: '/exercices/event-binding',
             component: () => import('../views/exercices/EventBinding.vue')
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            component: () => import('../views/not-found.vue'),
         },
     ]
 })
