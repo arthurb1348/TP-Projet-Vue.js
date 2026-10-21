@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { L } from 'vue-router/dist/index-u4XkZVDG.js';
-
-</script>
-
 <template>
   <main>
     <h1>Cours Vue.js</h1>
@@ -56,6 +51,16 @@ import { L } from 'vue-router/dist/index-u4XkZVDG.js';
       <li>
         <RouterLink to="/lessons/list-rendering">
           Cours 10 : List rendering
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/lessons/computed-properties">
+          Cours 11 : Computed properties
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/lessons/watchers">
+          Cours 12 : Watchers
         </RouterLink>
       </li>
     </ul>

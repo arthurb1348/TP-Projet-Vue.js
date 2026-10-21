@@ -60,6 +60,14 @@ const router = createRouter({
             component: () => import('../views/lessons/lesson-list-rendering.vue')
         },
         {
+            path: '/lessons/computed-properties',
+            component: () => import('../views/lessons/lesson-computed-properties.vue')
+        },
+        {
+            path: '/lessons/watchers',
+            component: () => import('../views/lessons/lesson-watchers.vue')
+        },
+        {
             path: '/exercices',
             component: () => import('../views/Exercices.vue')
         },
@@ -84,6 +92,14 @@ const router = createRouter({
             component: () => import('../views/exercices/ConditionalRendering.vue')
         },
         {
+            path: '/exercices/crash-test',
+            component: () => import('../views/exercices/CrashTest.vue')
+        },
+        {
+            path: '/exercices/exo-watchers',
+            component: () => import('../views/exercices/ExoWatchers.vue')
+        },
+        {
             path: '/tp',
             component: () => import('../views/TP.vue')
         },
@@ -94,6 +110,10 @@ const router = createRouter({
         {
             path: '/tp/dynamic-style',
             component: () => import('../views/tp/tp-dynamic-style.vue')
+        },
+        {
+            path: '/tp/watcher-computed',
+            component: () => import('../views/tp/tp-watcher-computed.vue')
         },
         {
             path: '/:pathMatch(.*)*',

@@ -28,6 +28,16 @@
           Exercice 5 : Rendu conditionnel
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/exercices/crash-test">
+          Exercice 6 : Crash test
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/exercices/exo-watchers">
+          Exercice 7 : Watchers
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
