@@ -59,7 +59,7 @@ const chartOptions = {
 };
 
 function attackMechant() {
-    badguy.value = Math.max(0, badguy.value - 7);
+    badguy.value = Math.max(0, badguy.value - 12);
     attackGentil();
     currentround.value++;
 }
@@ -71,8 +71,14 @@ function specialAttack() {
     currentround.value++;
 }
 
+function soin() {
+    player.value = Math.min(100, player.value + 33);
+    attackGentil();
+    currentround.value++;
+}
+
 function attackGentil() {
-    player.value = Math.max(0, player.value - 19);
+    player.value = Math.max(0, player.value - 22);
 }
 </script>
 
@@ -129,6 +135,12 @@ function attackGentil() {
                 v-else
             >
                 Pas encore...
+            </button>
+            <button 
+                type="button" 
+                @click="soin"
+            >
+                Se soigner
             </button>
         </div>
     </section>
