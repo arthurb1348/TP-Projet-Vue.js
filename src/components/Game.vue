@@ -7,6 +7,8 @@ ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 const player = ref(100);
 const badguy = ref(100);
+const currentround = ref(0);
+const lastSpecial = ref(0);
 
 const playerLife = computed(() => {
     return {
@@ -59,6 +61,14 @@ const chartOptions = {
 function attackMechant() {
     badguy.value = Math.max(0, badguy.value - 7);
     attackGentil();
+    currentround.value++;
+}
+
+function specialAttack() {
+    badguy.value = Math.max(0, badguy.value - 24);
+    lastSpecial.value = currentround.value;
+    attackGentil();
+    currentround.value++;
 }
 
 function attackGentil() {
@@ -101,6 +111,24 @@ function attackGentil() {
         <div class="actions">
             <button type="button" @click="attackMechant">
                 À l'attaque !!!
+            </button>
+        </div>
+
+        <div class="actions">
+            <button 
+                type="button" 
+                @click="specialAttack"
+                v-if="lastSpecial === 0 || currentround - lastSpecial > 3"
+            >
+                Chabite !!!
+            </button>
+            <button 
+                type="button" 
+                @click="specialAttack"
+                disabled
+                v-else
+            >
+                Pas encore...
             </button>
         </div>
     </section>
