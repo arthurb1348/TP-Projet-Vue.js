@@ -38,6 +38,11 @@
           Exercice 7 : Watchers
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/exercices/api">
+          Exercice 8 : API
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

@@ -15,7 +15,12 @@
       </li>
       <li>
         <RouterLink to="/tp/watcher-computed">
-          TP 3 : Réactivité
+          TP 3 : Watcher computed
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/tp/conditional-list-rendering">
+          TP 4 : Conditional Rendering / List Rendering
         </RouterLink>
       </li>
     </ul>

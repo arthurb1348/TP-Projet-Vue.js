@@ -37,7 +37,7 @@
 
 <template>
     <section>
-        <h1>Exercice 7 : Watchers</h1>
+        <h1>TP 3 : Watcher computed</h1>
         <h2>Valeur actuelle : {{ leNombre }}</h2>
         <button type="button" @click="augmenter1">
             + 1

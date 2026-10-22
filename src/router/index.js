@@ -100,6 +100,10 @@ const router = createRouter({
             component: () => import('../views/exercices/ExoWatchers.vue')
         },
         {
+            path: '/exercices/api',
+            component: () => import('../views/exercices/API.vue')
+        },
+        {
             path: '/tp',
             component: () => import('../views/TP.vue')
         },
@@ -114,6 +118,42 @@ const router = createRouter({
         {
             path: '/tp/watcher-computed',
             component: () => import('../views/tp/tp-watcher-computed.vue')
+        },
+        {
+            path: '/tp/conditional-list-rendering',
+            component: () => import('../views/tp/tp-conditional-list-rendering.vue')
+        },
+        {
+            path: '/corrections',
+            component: () => import('../views/Corrections.vue')
+        },
+        {
+            path: '/corrections/text-interpolation',
+            component: () => import('../views/corrections/exercice-text-interpolation.vue')
+        },
+        {
+            path: '/corrections/attribute-binding',
+            component: () => import('../views/corrections/exercice-attribute-binding.vue')
+        },
+        {
+            path: '/corrections/event-binding',
+            component: () => import('../views/corrections/exercice-event-binding.vue')
+        },
+        {
+            path: '/corrections/dynamic-styling',
+            component: () => import('../views/corrections/exercice-dynamic-styling.vue')
+        },
+        {
+            path: '/corrections/conditional-rendering',
+            component: () => import('../views/corrections/exercice-conditional-rendering.vue')
+        },
+        {
+            path: '/corrections/list-rendering',
+            component: () => import('../views/corrections/exercice-list-rendering.vue')
+        },
+        {
+            path: '/corrections/computed-properties',
+            component: () => import('../views/corrections/exercice-computed-properties.vue')
         },
         {
             path: '/:pathMatch(.*)*',
