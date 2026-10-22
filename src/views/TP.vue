@@ -23,6 +23,11 @@
           TP 4 : Conditional Rendering / List Rendering
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/tp/jeu-tour-par-tour">
+          TP 5 : Jeu tour par tour
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
