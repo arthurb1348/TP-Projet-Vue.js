@@ -43,6 +43,11 @@
           Exercice 8 : API
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/exercices/chartjs">
+          Exercice 9 : ChartJS
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

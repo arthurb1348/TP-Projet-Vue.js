@@ -104,6 +104,10 @@ const router = createRouter({
             component: () => import('../views/exercices/API.vue')
         },
         {
+            path: '/exercices/chartjs',
+            component: () => import('../views/exercices/ChartJS.vue')
+        },
+        {
             path: '/tp',
             component: () => import('../views/TP.vue')
         },
