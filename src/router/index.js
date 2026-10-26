@@ -120,6 +120,10 @@ const router = createRouter({
             component: () => import('../views/exercices/ChartJS.vue')
         },
         {
+            path: '/exercices/props-api',
+            component: () => import('../views/exercices/PropsAPI.vue')
+        },
+        {
             path: '/tp',
             component: () => import('../views/TP.vue')
         },

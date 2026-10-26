@@ -48,6 +48,11 @@
           Exercice 9 : ChartJS
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/exercices/props-api">
+          Exercice 10 : Fetch API + lifecycle + props 
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
