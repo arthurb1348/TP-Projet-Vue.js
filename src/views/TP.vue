@@ -28,6 +28,11 @@
           TP 5 : Jeu tour par tour
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/tp/tp-props">
+          TP 6 : Props
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

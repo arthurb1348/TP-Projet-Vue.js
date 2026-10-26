@@ -63,6 +63,21 @@
           Cours 12 : Watchers
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/lessons/chartjs">
+          Cours 13 : ChartJS
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/lessons/lifecycle">
+          Cours 14 : Cycle de vie
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/lessons/props">
+          Cours 15 : Props
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
