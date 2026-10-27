@@ -78,6 +78,11 @@
           Cours 15 : Props
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/lessons/router">
+          Cours 16 : Router props 
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

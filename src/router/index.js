@@ -16,6 +16,12 @@ const router = createRouter({
         },
         // ! Ces routes sont en lazy loading.
         {
+            path: '/details/:id/:itemName',
+            name: 'Details',
+            component: () => import('../components/DetailsPage.vue'),
+            props: true,
+        },
+        {
             path: '/lessons',
             component: () => import('../views/Lessons.vue')
         },
@@ -78,6 +84,10 @@ const router = createRouter({
         {
             path: '/lessons/props',
             component: () => import('../views/lessons/lesson-props.vue')
+        },
+        {
+            path: '/lessons/router',
+            component: () => import('../views/lessons/lesson-router.vue')
         },
         {
             path: '/exercices',
@@ -206,6 +216,10 @@ const router = createRouter({
         {
             path: '/corrections/tp-reactivite',
             component: () => import('../views/corrections/tp-reactivite.vue')
+        },
+        {
+            path: '/corrections/tp-props',
+            component: () => import('../views/corrections/exercice-props.vue')
         },
         {
             path: '/:pathMatch(.*)*',

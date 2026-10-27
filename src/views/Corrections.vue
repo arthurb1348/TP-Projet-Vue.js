@@ -68,6 +68,11 @@
                     Correction TP 3 : Watchers computed
                 </RouterLink>
             </li>
+            <li>
+                <RouterLink to="/corrections/tp-props">
+                    Correction TP 6 : Props
+                </RouterLink>
+            </li>
         </ul>
     </main>
 </template>
