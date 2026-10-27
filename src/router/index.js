@@ -166,6 +166,10 @@ const router = createRouter({
             component: () => import('../views/tp/tp-props.vue')
         },
         {
+            path: '/tp/tp-emit',
+            component: () => import('../views/tp/tp-defineEmits.vue')
+        },
+        {
             path: '/corrections',
             component: () => import('../views/Corrections.vue')
         },

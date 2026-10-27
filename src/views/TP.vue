@@ -33,6 +33,11 @@
           TP 6 : Props
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/tp/tp-emit">
+          TP 7 : Remontée d'événement avec defineEmits
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
