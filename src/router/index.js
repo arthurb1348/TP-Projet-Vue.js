@@ -184,6 +184,30 @@ const router = createRouter({
             component: () => import('../views/corrections/exercice-computed-properties.vue')
         },
         {
+            path: '/corrections/watchers',
+            component: () => import('../views/corrections/Watchers.vue')
+        },
+        {
+            path: '/corrections/api',
+            component: () => import('../views/corrections/exercice-lifecycle-api.vue')
+        },
+        {
+            path: '/corrections/chartjs',
+            component: () => import('../views/corrections/BarChartDynamic.vue')
+        },
+        {
+            path: '/corrections/tp-data-binging',
+            component: () => import('../views/corrections/tp-data-binding.vue')
+        },
+        {
+            path: '/corrections/tp-dynamic-styling',
+            component: () => import('../views/corrections/tp-dynamic-styling.vue')
+        },
+        {
+            path: '/corrections/tp-reactivite',
+            component: () => import('../views/corrections/tp-reactivite.vue')
+        },
+        {
             path: '/:pathMatch(.*)*',
             component: () => import('../views/not-found.vue'),
         },

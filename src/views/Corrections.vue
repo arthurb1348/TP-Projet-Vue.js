@@ -30,12 +30,42 @@
             </li>
             <li>
                 <RouterLink to="/corrections/list-rendering">
-                    Correction exercice 5 - 2 : List list-rendering
+                    Correction exercice 5 - 2 : List-rendering
                 </RouterLink>
             </li>
             <li>
                 <RouterLink to="/corrections/computed-properties">
                     Correction exercice 6 : Crash test
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/corrections/watchers">
+                    Correction exercice 7 : Watchers
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/corrections/api">
+                    Correction exercice 8 : API
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/corrections/chartJS">
+                    Correction exercice 9 : Chart JS
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/corrections/tp-data-binding">
+                    Correction TP 1 : Data binding
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/corrections/tp-dynamic-styling">
+                    Correction TP 2 : Dynamic styling
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/corrections/tp-reactivite">
+                    Correction TP 3 : Watchers computed
                 </RouterLink>
             </li>
         </ul>
