@@ -1,31 +1,42 @@
 <template>
-    <li class="flex gap-2 bg-blue-500 p-4 rounded-xl">
-        <div>
-            <h2>{{ name }}</h2>
-            <p>{{ email }}</p>
-            <p>{{ phone }}</p>
+    <li class="card min-w-0 border border-base-300 bg-base-100 shadow-sm">
+        <div class="card-body gap-4 p-5">
+            <div class="flex items-start justify-between gap-3">
+                <h2 class="card-title min-w-0 break-words">
+                    {{ name }}
+                </h2>
 
-            <div v-if="premium" style="background-color: aquamarine;">
-                Premium
+                <span v-if="premium" class="badge badge-primary shrink-0">
+                    Premium
+                </span>
+                <span v-else class="badge badge-ghost shrink-0">
+                    Standard
+                </span>
             </div>
-            <div v-else>Standard</div>
+
+            <div class="space-y-1 text-sm text-base-content/70">
+                <p class="break-words">{{ email }}</p>
+                <p>{{ phone }}</p>
+            </div>
+
+            <div class="card-actions mt-auto flex-wrap">
+                <button
+                    type="button"
+                    class="btn btn-outline btn-sm"
+                    @click="updatePremium"
+                >
+                    {{ premium ? "Passer Standard" : "Passer Premium" }}
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-error btn-outline btn-sm"
+                    @click="deleteFriend"
+                >
+                    Supprimer
+                </button>
+            </div>
         </div>
-
-        <button
-            type="button"
-            class="btn btn-success"
-            @click="updatePremium"
-        >
-            Changer le statut
-        </button>
-
-        <button
-            type="button"
-            class="btn btn-error"
-            @click="deleteFriend"
-        >
-            Supprimer
-        </button>
     </li>
 </template>
 

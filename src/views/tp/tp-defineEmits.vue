@@ -61,21 +61,38 @@ function handleAdd(name: string, phone: string, email: string) {
 </script>
 
 <template>
-    <h1>TP : defineEmits</h1>
+    <section class="space-y-6">
+        <header>
+            <h1 class="text-3xl font-bold">Mes amis</h1>
+            <p class="mt-2 text-base-content/70">
+                Ajoutez vos contacts et gérez leur statut.
+            </p>
+        </header>
 
-    <NewFriend @add-friend="handleAdd" />
+        <div class="grid items-start gap-6 lg:grid-cols-3">
+            <NewFriend @add-friend="handleAdd" />
 
-    <ul>
-        <OneFriendEmit
-            v-for="ami in lesAmis"
-            :key="ami.id"
-            :unAmiId="ami.id"
-            :name="ami.name"
-            :phone="ami.phone"
-            :email="ami.email"
-            :premium="ami.premium"
-            @mon-event-premium-update="updatePremium"
-            @delete-friend="handleDelete"
-        />
-    </ul>
+            <ul class="grid min-w-0 gap-4 lg:col-span-2 xl:grid-cols-2">
+                <li
+                    v-if="lesAmis.length === 0"
+                    class="col-span-full rounded-2xl border border-dashed
+                            border-base-300 bg-base-100 p-8 text-center"
+                >
+                    Aucun ami pour le moment. Ajoutez votre premier contact !
+                </li>
+
+                <OneFriendEmit
+                    v-for="ami in lesAmis"
+                    :key="ami.id"
+                    :unAmiId="ami.id"
+                    :name="ami.name"
+                    :phone="ami.phone"
+                    :email="ami.email"
+                    :premium="ami.premium"
+                    @mon-event-premium-update="updatePremium"
+                    @delete-friend="handleDelete"
+                />
+            </ul>
+        </div>
+    </section>
 </template>

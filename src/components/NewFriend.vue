@@ -1,23 +1,54 @@
 <template>
-    <div class="card-body">
-        <h2 class="card-title text-2xl font-bold">Ajouter un ami</h2>
-        <form class="form-control w-full" @submit.prevent="submitFriend">
-            <label class="label">
-                <span class="label-text">Nom:</span>
-            </label>
-            <input type="text" v-model="name" class="input input-bordered w-full" />       
-            <label class="label">
-                <span class="label-text">Téléphone:</span>
-            </label>
-            <input type="text" v-model="phone" class="input input-bordered w-full" />    
-            <label class="label">
-                <span class="label-text">Email:</span>
-            </label>
-            <input type="text" v-model="email" class="input input-bordered w-full" />   
+    <section
+        class="card min-w-0 border border-base-300 bg-base-100 shadow-sm"
+    >
+        <form class="card-body gap-4" @submit.prevent="submitFriend">
+            <h2 class="card-title">Ajouter un ami</h2>
 
-            <button type="submit">Ajouter l’ami</button>
+            <div class="space-y-2">
+                <label for="friend-name" class="block text-sm font-medium">
+                    Nom
+                </label>
+                <input
+                    id="friend-name"
+                    v-model="name"
+                    type="text"
+                    placeholder="Arthur"
+                    class="input w-full border-base-300"
+                />
+            </div>
+
+            <div class="space-y-2">
+                <label for="friend-phone" class="block text-sm font-medium">
+                    Téléphone
+                </label>
+                <input
+                    id="friend-phone"
+                    v-model="phone"
+                    type="tel"
+                    placeholder="06 12 34 56 78"
+                    class="input w-full border-base-300"
+                />
+            </div>
+
+            <div class="space-y-2">
+                <label for="friend-email" class="block text-sm font-medium">
+                    Email
+                </label>
+                <input
+                    id="friend-email"
+                    v-model="email"
+                    type="email"
+                    placeholder="arthur@exemple.fr"
+                    class="input w-full border-base-300"
+                />
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2 w-full">
+                Ajouter l’ami
+            </button>
         </form>
-    </div>
+    </section>
 </template>
 
 <script setup>
