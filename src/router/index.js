@@ -90,6 +90,10 @@ const router = createRouter({
             component: () => import('../views/lessons/lesson-router.vue')
         },
         {
+            path: '/lessons/emit',
+            component: () => import('../views/lessons/lesson-emit.vue')
+        },
+        {
             path: '/exercices',
             component: () => import('../views/Exercices.vue')
         },

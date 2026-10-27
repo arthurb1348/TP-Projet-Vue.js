@@ -83,6 +83,11 @@
           Cours 16 : Router props 
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/lessons/emit">
+          Cours 17 : Emit 
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
