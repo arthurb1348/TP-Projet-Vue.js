@@ -43,6 +43,11 @@
           TP 8 : Component Communication
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/tp/dashboard">
+          TP 9 : Tableau de bord réactif
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>

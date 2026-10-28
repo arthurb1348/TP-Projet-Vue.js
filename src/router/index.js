@@ -174,6 +174,10 @@ const router = createRouter({
             component: () => import('../views/tp/ComponentCommunication.vue')
         },
         {
+            path: '/tp/dashboard',
+            component: () => import('../views/tp/tp-dashboard.vue')
+        },
+        {
             path: '/corrections',
             component: () => import('../views/Corrections.vue')
         },
