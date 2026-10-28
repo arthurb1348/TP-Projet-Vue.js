@@ -6,6 +6,7 @@
   <router-link to="/exercices" class="btn btn-ghost">Exercices</router-link>  
   <router-link to="/tp" class="btn btn-ghost">TP</router-link>
   <router-link to="/corrections" class="btn btn-ghost">Corrections</router-link>
+  <RouterLink to="/articles" class="btn btn-ghost">Articles</RouterLink>
 </div>
 </template>
 

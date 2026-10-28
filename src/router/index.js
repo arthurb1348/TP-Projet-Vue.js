@@ -230,6 +230,15 @@ const router = createRouter({
             component: () => import('../views/corrections/exercice-props.vue')
         },
         {
+            path: '/corrections/emits',
+            component: () => import('../views/corrections/exercice-emit.vue')
+        },
+        {
+            path: "/articles",
+            name: "articles",
+            component: () => import("../views/FirebaseArticlesView.vue")
+        },
+        {
             path: '/:pathMatch(.*)*',
             component: () => import('../views/not-found.vue'),
         },

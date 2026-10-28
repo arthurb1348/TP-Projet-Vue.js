@@ -73,6 +73,11 @@
                     Correction TP 6 : Props
                 </RouterLink>
             </li>
+            <li>
+                <RouterLink to="/corrections/emit">
+                    Correction TP 7 : Remontée d'événement avec defineEmits
+                </RouterLink>
+            </li>
         </ul>
     </main>
 </template>
