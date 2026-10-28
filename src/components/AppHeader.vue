@@ -7,6 +7,8 @@
   <router-link to="/tp" class="btn btn-ghost">TP</router-link>
   <router-link to="/corrections" class="btn btn-ghost">Corrections</router-link>
   <RouterLink to="/articles" class="btn btn-ghost">Articles</RouterLink>
+  <RouterLink to="/register" class="btn btn-ghost">S'enregistrer</RouterLink>
+  <RouterLink to="/login" class="btn btn-ghost">Se connecter</RouterLink>
 </div>
 </template>
 

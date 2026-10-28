@@ -170,6 +170,10 @@ const router = createRouter({
             component: () => import('../views/tp/tp-defineEmits.vue')
         },
         {
+            path: '/tp/comcom',
+            component: () => import('../views/tp/ComponentCommunication.vue')
+        },
+        {
             path: '/corrections',
             component: () => import('../views/Corrections.vue')
         },
@@ -237,6 +241,16 @@ const router = createRouter({
             path: "/articles",
             name: "articles",
             component: () => import("../views/FirebaseArticlesView.vue")
+        },
+        {
+            path: "/register",
+            name: "register",
+            component: () => import("../views/auth/register.vue")
+        },
+        {
+            path: "/login",
+            name: "login",
+            component: () => import("../views/auth/login.vue")
         },
         {
             path: '/:pathMatch(.*)*',

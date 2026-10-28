@@ -38,6 +38,11 @@
           TP 7 : Remontée d'événement avec defineEmits
         </RouterLink>
       </li>
+      <li>
+        <RouterLink to="/tp/comcom">
+          TP 8 : Component Communication
+        </RouterLink>
+      </li>
     </ul>
   </main>
 </template>
