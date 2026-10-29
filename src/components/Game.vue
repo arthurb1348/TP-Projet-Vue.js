@@ -83,13 +83,13 @@ function attackGentil() {
 </script>
 
 <template>
-    <section class="jeu">
-        <div class="gentil">
-            <h2>Gentil</h2>
+    <section class="jeu flex flex-col items-center justify-center">
+        <div class="gentil flex flex-col items-center justify-center">
+            <h2 class="text-xl font-bold">Gentil</h2>
 
-            <p>Vie : {{ player }} / 100</p>
+            <p class="text-lg">Vie : {{ player }} / 100</p>
 
-            <div class="barre-vie">
+            <div class="barre-vie w-full h-8 bg-gray-300 rounded-lg overflow-hidden">
                 <Bar
                     :data="playerLife"
                     :options="chartOptions"
@@ -100,11 +100,11 @@ function attackGentil() {
         </div>
         
 
-        <div class="mechant">
-            <h2>Méchant</h2>
+        <div class="mechant flex flex-col items-center justify-center mt-4">
+            <h2 class="text-xl font-bold">Méchant</h2>
 
-            <p>Vie : {{ badguy }} / 100</p>
-            <div class="barre-vie">
+            <p class="text-lg">Vie : {{ badguy }} / 100</p>
+            <div class="barre-vie w-full h-8 bg-gray-300 rounded-lg overflow-hidden">
                 <Bar
                     :data="badguyLife"
                     :options="chartOptions"
@@ -114,17 +114,18 @@ function attackGentil() {
             </div>
         </div>
 
-        <div class="actions">
-            <button type="button" @click="attackMechant">
+        <div class="actions mt-4">
+            <button type="button" @click="attackMechant" class="btn btn-primary">
                 À l'attaque !!!
             </button>
         </div>
 
-        <div class="actions">
+        <div class="actions mt-4">
             <button 
                 type="button" 
                 @click="specialAttack"
                 v-if="lastSpecial === 0 || currentround - lastSpecial > 3"
+                class="btn btn-warning"
             >
                 Chabite !!!
             </button>
@@ -133,12 +134,14 @@ function attackGentil() {
                 @click="specialAttack"
                 disabled
                 v-else
+                class="btn btn-warning"
             >
                 Pas encore...
             </button>
             <button 
                 type="button" 
                 @click="soin"
+                class="btn btn-success"
             >
                 Se soigner
             </button>

@@ -8,24 +8,24 @@ const descriptionImage = "Une photographie d’illustration";
 </script>
 
 <template>
-  <section>
-    <h1>Exercice 2 : liaison d’attributs</h1>
+  <section class="space-y-6">
+    <h1 class="text-2xl font-bold">Exercice 2 : liaison d’attributs</h1>
 
-    <h2>Liens dynamiques</h2>
+    <h2 class="text-xl font-semibold">Liens dynamiques</h2>
 
-    <p>
+    <p class="text-base-content/70">
       <a v-bind:href="leLien">
         Documentation Vue — syntaxe complète
       </a>
     </p>
 
-    <p>
+    <p class="text-base-content/70">
       <a :href="leLien">
         Documentation Vue — syntaxe courte
       </a>
     </p>
 
-    <h2>Image dynamique</h2>
+    <h2 class="text-xl font-semibold">Image dynamique</h2>
 
     <img
       :src="laImg"

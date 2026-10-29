@@ -23,11 +23,11 @@
 </script>
 
 <template>
-    <section>
-        <h2>Poke-poke</h2>
+    <section class="p-4">
+        <h2 class="text-2xl font-bold">Poke-poke</h2>
 
-        <ul>
-            <li v-for="pokemon in list" :key="pokemon.url">
+        <ul class="mt-4 list-inside list-disc space-y-2">
+            <li v-for="pokemon in list" :key="pokemon.url" class="mb-2">
                 {{ pokemon.name }}
             </li>
         </ul>

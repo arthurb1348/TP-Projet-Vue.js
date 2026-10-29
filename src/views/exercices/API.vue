@@ -6,8 +6,8 @@ import TaskApi from '../../components/TaskApi.vue';
 
 
 <template>
-    <main>
-        <h1>Exercice 8 : API</h1>
+    <main class="space-y-10">
+        <h1 class="text-2xl font-bold">Exercice 8 : API</h1>
         <PokemonApi />
         <TaskApi />
     </main>

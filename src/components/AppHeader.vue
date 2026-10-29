@@ -9,6 +9,8 @@
   <RouterLink to="/articles" class="btn btn-ghost">Articles</RouterLink>
   <RouterLink to="/register" class="btn btn-ghost">S'enregistrer</RouterLink>
   <RouterLink to="/login" class="btn btn-ghost">Se connecter</RouterLink>
+  <RouterLink to="/logout" class="btn btn-ghost">Se déconnecter</RouterLink>
+  <RouterLink to="/admin" class="btn btn-ghost">Espace privé</RouterLink>
 </div>
 </template>
 

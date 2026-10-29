@@ -13,16 +13,16 @@ function reduire() {
 </script>
 
 <template>
-  <section>
-    <h1>Exercice 3 : gestion des événements</h1>
+  <section class="rounded-3xl border border-base-300 bg-base-100 p-6 shadow-sm sm:p-10">
+    <h1 class="text-2xl font-bold">Exercice 3 : gestion des événements</h1>
 
-    <p>Compteur : {{ compteur }}</p>
+    <p class="text-lg">Compteur : {{ compteur }}</p>
 
-    <button type="button" @click="augmenter">
+    <button type="button" class="bg-blue-600 text-white border border-blue-600 rounded-md py-2 px-4 hover:bg-blue-700" @click="augmenter">
       + 1000
     </button>
 
-    <button type="button" @click="reduire">
+    <button type="button" class="bg-red-600 text-white border border-red-600 rounded-md py-2 px-4 hover:bg-red-700" @click="reduire">
       − 77
     </button>
   </section>

@@ -1,5 +1,5 @@
 <template>
-    <h1>Exercice 9 : ChartJS</h1>
+    <h1 class="text-2xl font-bold">Exercice 9 : ChartJS</h1>
     <BarChart />
 </template>
 

@@ -17,97 +17,78 @@
 </script>
 
 <template>
-  <section>
-    <h1>Exercice 1 : interpolation de texte</h1>
+  <section class="rounded-3xl border border-base-300 bg-base-100 p-6 shadow-sm sm:p-10">
+    <h1 class="text-2xl font-bold">Exercice 1 : interpolation de texte</h1>
 
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Variable ou expression</th>
-          <th scope="col">Valeur</th>
+    <table class="mt-6">
+      <thead class="bg-gray-200">
+        <tr class="text-left">
+          <th scope="col" class="p-4">Variable ou expression</th>
+          <th scope="col" class="p-4">Valeur</th>
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>unLivre</td>
-          <td>{{ unLivre }}</td>
+      <tbody class="divide-y divide-gray-300">
+        <tr class="bg-gray-100">
+          <td class="p-4">unLivre</td>
+          <td class="p-4">{{ unLivre }}</td>
         </tr>
 
         <tr>
-          <td>isOnline</td>
-          <td>{{ isOnline }}</td>
+          <td class="p-4">isOnline</td>
+          <td class="p-4">{{ isOnline }}</td>
         </tr>
 
         <tr>
-          <td>unNombre</td>
-          <td>{{ unNombre }}</td>
+          <td class="p-4">unNombre</td>
+          <td class="p-4">{{ unNombre }}</td>
         </tr>
 
         <tr>
-          <td>unTableau</td>
-          <td>{{ unTableau }}</td>
+          <td class="p-4">unTableau</td>
+          <td class="p-4">{{ unTableau }}</td>
         </tr>
 
         <tr>
-          <td>unTableau[0]</td>
-          <td>{{ unTableau[0] }}</td>
+          <td class="p-4">unTableau[0]</td>
+          <td class="p-4">{{ unTableau[0] }}</td>
         </tr>
 
         <tr>
-          <td>unObjet</td>
-          <td>{{ unObjet }}</td>
+          <td class="p-4">unObjet</td>
+          <td class="p-4">{{ unObjet }}</td>
         </tr>
 
         <tr>
-          <td>unObjet.name</td>
-          <td>{{ unObjet.name }}</td>
+          <td class="p-4">unObjet.name</td>
+          <td class="p-4">{{ unObjet.name }}</td>
         </tr>
 
         <tr>
-          <td>unObjet["name"]</td>
-          <td>{{ unObjet["name"] }}</td>
+          <td class="p-4">unObjet["name"]</td>
+          <td class="p-4">{{ unObjet["name"] }}</td>
         </tr>
 
         <tr>
-          <td>unObjet.tel</td>
-          <td>{{ unObjet.tel }}</td>
+          <td class="p-4">unObjet.tel</td>
+          <td class="p-4">{{ unObjet.tel }}</td>
         </tr>
 
         <tr>
-          <td>fonctionTest()</td>
-          <td>{{ fonctionTest() }}</td>
+          <td class="p-4">fonctionTest()</td>
+          <td class="p-4">{{ fonctionTest() }}</td>
         </tr>
 
         <tr>
-          <td>Condition ternaire</td>
-          <td>{{ isOnline ? "Connecté" : "Déconnecté" }}</td>
+          <td class="p-4">Condition ternaire</td>
+          <td class="p-4">{{ isOnline ? "Connecté" : "Déconnecté" }}</td>
         </tr>
 
         <tr>
-          <td>Chaîne contenant du HTML</td>
-          <td>{{ duHtml }}</td>
+          <td class="p-4">Chaîne contenant du HTML</td>
+          <td class="p-4" v-html="duHtml"></td>
         </tr>
       </tbody>
     </table>
   </section>
 </template>
-
-<style scoped>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 12px 16px;
-  border: 1px solid #aaa;
-  text-align: left;
-}
-
-th {
-  background-color: #e4ece8;
-  color: #222;
-}
-</style>

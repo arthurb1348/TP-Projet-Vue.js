@@ -67,18 +67,24 @@
 </script>
 
 <template>
-    <section class="container">
-        <h2>Prévisions météo à Montpellier</h2>
+    <section class="container px-4 py-8">
+        <h2 class="text-2xl font-bold">Prévisions météo à Montpellier</h2>
 
-        <p v-if="erreur" role="alert">{{ erreur }}</p>
+        <p v-if="erreur" role="alert" class="text-red-500">
+            {{ erreur }}
+        </p>
 
-        <p v-else-if="!loaded">Chargement du graphique…</p>
+        <p v-else-if="!loaded" class="text-gray-500">
+            Chargement du graphique…
+        </p>
 
-        <div v-else class="graphique">
+        <div v-else class="graphique mb-4">
             <Bar :data="chartData" :options="chartOptions" />
         </div>
 
-        <small>Données : <a href="https://open-meteo.com/">Open-Meteo</a></small>
+        <small class="text-sm text-gray-500">
+            Données : <a href="https://open-meteo.com/" class="text-blue-500 hover:underline">Open-Meteo</a>
+        </small>
     </section>
 </template>
 

@@ -71,12 +71,12 @@ onMounted(recupDigimons);
 </script>
 
 <template>
-    <h1>Fetch API + lifecycle + props</h1>
-    <section>
+    <h1 class="text-2xl font-bold">Fetch API + lifecycle + props</h1>
+    <section class="rounded-3xl border border-base-300 bg-base-100 p-6 shadow-sm sm:p-10">
         <div>
-            <h2>Pokémons</h2>
+            <h2 class="text-xl font-semibold">Pokémons</h2>
 
-            <ul>
+            <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                 <Pokemon
                     v-for="pokemon in list"
                     :key="pokemon.id"
@@ -86,10 +86,10 @@ onMounted(recupDigimons);
                 />
             </ul>
         </div>
-        <div>
-            <h2>Digimons</h2>
+        <div class="mt-6">
+            <h2 class="text-xl font-semibold">Digimons</h2>
 
-            <ul>
+            <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                 <Digimon
                     v-for="digimon in list2"
                     :key="digimon.name"

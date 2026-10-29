@@ -24,12 +24,12 @@
     onMounted(chargerTaches);
 </script>
 
-<template>
-    <section>
-        <h2>Les tâches récupérées</h2>
+<template >
+    <section class="p-4">
+        <h2 class="text-2xl font-bold">Les tâches récupérées</h2>
 
-        <ul>
-            <li v-for="tache in taches" :key="tache.id">
+        <ul class="mt-4 list-inside list-disc space-y-2">
+            <li v-for="tache in taches" :key="tache.id" class="mb-2">
                 {{ tache.title }}
             </li>
         </ul>

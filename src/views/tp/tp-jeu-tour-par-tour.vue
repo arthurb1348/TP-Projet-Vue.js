@@ -1,5 +1,5 @@
 <template>
-    <h1>TP 5: jeu tour par tour</h1>
+    <h1 class="text-2xl font-bold">TP 5: jeu tour par tour</h1>
     <BarChart />
 </template>
 

@@ -27,17 +27,20 @@
 </script>
 
 <template>
-    <section>
-        <h1>TP : Dynamic style</h1>
+    <section class="exercice">
+        <h1 class="text-2xl font-bold">TP : Dynamic style</h1>
 
-        <div>
-            <label for="mot">Entrez « hello » ou « world » :</label>
+        <div class="mt-4">
+            <label for="mot" class="block text-sm font-medium text-gray-700">
+                Entrez « hello » ou « world » :
+            </label>
 
             <input
                 id="mot"
                 type="text"
                 placeholder="hello"
                 @input="lireMot"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
             />
 
             <h2 
@@ -48,14 +51,17 @@
             </h2>
         </div>
 
-        <div>
-            <label for="couleur">Entrez une couleur CSS :</label>
+        <div class="mt-4">
+            <label for="couleur" class="block text-sm font-medium text-gray-700">
+                Entrez une couleur CSS :
+            </label>
 
             <input
                 id="couleur"
                 type="text"
                 placeholder="red, blue, orange..."
                 @input="lireCouleur"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
             />
 
             <h2 :style="{ backgroundColor: couleurFond }">
@@ -63,7 +69,7 @@
             </h2>
         </div>
 
-        <button type="button" @click="basculerTitre">
+        <button type="button" @click="basculerTitre" class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Afficher / masquer le premier titre
         </button>
     </section>
@@ -75,21 +81,6 @@
         background-color: white;
         color: #222;
         border-radius: 12px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    input {
-        padding: 10px;
-    }
-
-    h2 {
-        padding: 16px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
     }
 
     .maClasseHello {

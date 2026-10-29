@@ -25,12 +25,13 @@
 </script>
 
 <template>
-    <section>
-        <h1>Ma liste de films</h1>
+    <section class="space-y-6">
+        <h1 class="text-2xl font-bold">Ma liste de films</h1>
 
-        <label for="film">Nom du film :</label>
+        <label for="film" class="font-medium">Nom du film :</label>
 
         <input
+            class="border border-gray-300 rounded-md p-2 w-full"
             id="film"
             type="text"
             placeholder="Exemple : Tutur 2 le retour "
@@ -38,127 +39,29 @@
             @input="lireNomFilm"
         />
 
-        <button type="button" @click="ajouterFilm">
+        <button type="button" class="bg-green-600 text-white border border-green-600 rounded-md py-2 px-4 hover:bg-green-700" @click="ajouterFilm">
             Ajouter le film
         </button>
 
-        <ul v-if="mesFilms.length > 0">
+        <ul v-if="mesFilms.length > 0" class="list-disc list-inside space-y-2">
             <li
                 v-for="(film, index) in mesFilms"
                 :key="index"
+                class="flex items-center justify-between bg-green-100 rounded-md p-2"
             >
 
                 <button
                     type="button"
-                    class="bouton-supprimer"
-                    @click="supprimerFilm(index)"
+                    class="bouton-supprimer bg-red-600 text-white border border-red-600 rounded-md py-1 px-2 hover:bg-red-700"
+                    @click="supprimerFilm(index)"   
                 >
                     {{ film }} - Cliquez pour supprimer
                 </button>
             </li>
         </ul>
 
-        <p v-else>
+        <p v-else class="text-gray-500">
             Votre liste est vide : ajoutez votre premier film !
         </p>
     </section>
 </template>
-
-<style scoped>
-    section {
-        max-width: 600px;
-        margin: 24px auto;
-        padding: 24px;
-        background: #ffffff;
-        color: #1f2937;
-        border: 1px solid #cbd5e1;
-        border-radius: 12px;
-        text-align: left;
-        line-height: 1.5;
-    }
-
-    h1 {
-        margin: 0 0 24px;
-        font-size: 1.6rem;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-    }
-
-    input,
-    button {
-        box-sizing: border-box;
-        width: 100%;
-        min-height: 44px;
-        padding: 12px;
-        font: inherit;
-        border-radius: 8px;
-    }
-
-    input {
-        background: white;
-        color: #1f2937;
-        border: 1px solid #64748b;
-    }
-
-    input::placeholder {
-        color: #64748b;
-        opacity: 1;
-    }
-
-    button {
-        margin-top: 12px;
-        background: #166534;
-        color: white;
-        border: 1px solid #166534;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #14532d;
-    }
-
-    input:focus-visible,
-    button:focus-visible {
-        outline: 3px solid #1d4ed8;
-        outline-offset: 3px;
-    }
-
-    ul {
-        margin-top: 24px;
-        padding-left: 24px;
-    }
-
-    li {
-        margin-bottom: 8px;
-        padding: 8px 12px;
-        background: #f0fdf4;
-        border-radius: 6px;
-        overflow-wrap: anywhere;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-    }
-
-    p {
-        margin-top: 24px;
-        padding: 12px;
-        background: #f1f5f9;
-        border-radius: 8px;
-    }
-    .bouton-supprimer {
-        width: auto;
-        margin-top: 0;
-        flex-shrink: 0;
-        background: #b91c1c;
-        border-color: #b91c1c;
-    }
-
-    .bouton-supprimer:hover {
-        background: #991b1b;
-    }
-</style>

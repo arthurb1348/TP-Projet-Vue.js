@@ -2,6 +2,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 //! Cette route HOME (qui est un composant vue) on importe ici et on va l'utiliser dans notre routeur
 import Home from '../views/Home.vue';
+import { getCurrentUser } from "../services/AuthService.js";
+import { auth } from "../firebase.js";
 
 
 
@@ -12,6 +14,7 @@ const router = createRouter({
         {
             path: '/home',
             alias: '/',
+            name: 'home',
             component: Home
         },
         // ! Ces routes sont en lazy loading.
@@ -23,11 +26,11 @@ const router = createRouter({
         },
         {
             path: '/lessons',
-            component: () => import('../views/Lessons.vue')
+            component: () => import('../views/Lessons.vue'),
         },
         {
             path: '/lessons/setup',
-            component: () => import('../views/lessons/lesson-setup.vue')
+            component: () => import('../views/lessons/lesson-setup.vue'),
         },
         {
             path: '/lessons/intro',
@@ -273,9 +276,43 @@ const router = createRouter({
             component: () => import("../views/auth/login.vue")
         },
         {
+            path: "/admin",
+            name: "admin",
+            component: () => import("../views/AdminView.vue"),
+            meta: {
+                requiresAuth: true
+            }
+            },
+        {
             path: '/:pathMatch(.*)*',
             component: () => import('../views/not-found.vue'),
         },
     ]
 })
-export default router
+
+router.beforeEach(async (to, from, next) => {
+    // Vérifie si la destination nécessite une connexion.
+    const requiresAuth = to.matched.some(
+        (record) => record.meta.requiresAuth
+    );
+
+    // Les pages publiques restent accessibles directement.
+    if (!requiresAuth) {
+        return next();
+    }
+
+    // Attend que Firebase nous donne l'utilisateur ou null.
+    const currentUser = await getCurrentUser();
+
+    // Sans connexion, redirige vers ta route nommée "login".
+    if (!currentUser) {
+        return next({ name: "login" });
+    }
+
+    // L'utilisateur connecté peut continuer.
+    return next();
+});
+
+
+export default router;
+

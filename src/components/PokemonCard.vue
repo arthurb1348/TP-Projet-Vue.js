@@ -16,9 +16,9 @@ defineProps({
 </script>
 
 <template>
-    <li>
-        <h2>{{ name }}</h2>
-        <p>Numéro : {{ id }}</p>
-        <img :src="img" :alt="name">
+    <li class="mb-4">
+        <h2 class="text-xl font-bold">{{ name }}</h2>
+        <p class="text-lg">Numéro : {{ id }}</p>
+        <img :src="img" :alt="name" class="mt-2 w-32 h-32 object-contain" />
     </li>
 </template>

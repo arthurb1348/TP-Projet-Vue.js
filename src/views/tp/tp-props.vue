@@ -10,8 +10,8 @@ const lesAmis = ref([
 </script>
 
 <template>
-    <h1>Les Amis</h1>
-    <ul>
+    <h1 class="text-2xl font-bold">Les Amis</h1>
+    <ul class="mt-4 list-inside list-disc space-y-2">
         <Friend 
             v-for="ami in lesAmis"
             :key="ami.id"

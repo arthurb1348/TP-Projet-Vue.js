@@ -17,10 +17,10 @@
 </script>
 
 <template>
-    <section>
-        <h1>Exercice 7 : Watchers</h1>
-        <h2>Valeur actuelle : {{ leNombre }}</h2>
-        <button type="button" @click="augmenter">
+    <section class="rounded-3xl border border-base-300 bg-base-100 p-6 shadow-sm sm:p-10">
+        <h1 class="text-2xl font-bold">Exercice 7 : Watchers</h1>
+        <h2 class="text-lg">Valeur actuelle : {{ leNombre }}</h2>
+        <button type="button" class="bg-blue-600 text-white border border-blue-600 rounded-md py-2 px-4 hover:bg-blue-700" @click="augmenter">
             + 1
         </button>
     </section>

@@ -42,7 +42,7 @@
 
     <p class="text-center mt-6 text-sm opacity-80">
       Vous n'avez pas encore de compte ?
-      <router-link to="/auth/register" class="link link-hover link-secondary font-semibold">
+      <router-link to="/register" class="link link-hover link-secondary font-semibold">
         Inscrivez-vous
       </router-link>.
     </p>
@@ -63,7 +63,7 @@ async function login() {
   try {
     await signInWithEmailAndPassword(auth, email.value, password.value);
     // Assurez-vous que la route 'home' existe
-    router.push({ name: "home" });
+    await router.replace("/admin");;
   } catch (error) {
     // DaisyUI permettrait ici d'utiliser un composant Toast ou Modal plus élégant que alert()
     alert("Erreur de connexion : " + error.message);

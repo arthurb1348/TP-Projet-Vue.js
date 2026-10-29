@@ -77,7 +77,3 @@ function deleteFriend() {
     emit("delete-friend", props.unAmiId);
 }
 </script>
-
-<style scoped>
-/* Les styles sont gérés par DaisyUI et Tailwind, pas de CSS nécessaire ici. */
-</style>

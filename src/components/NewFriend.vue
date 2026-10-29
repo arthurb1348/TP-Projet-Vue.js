@@ -64,7 +64,3 @@
         emit('add-friend', name.value, phone.value, email.value);
     }
 </script>
-
-<style scoped>
-/* Les styles sont gérés par DaisyUI et Tailwind, pas de CSS nécessaire ici. */
-</style>

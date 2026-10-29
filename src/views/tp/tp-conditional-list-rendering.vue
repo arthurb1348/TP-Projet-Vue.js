@@ -30,10 +30,12 @@
 </script>
 
 <template>
-    <section>
-        <h1>Ma liste de films</h1>
+    <section class="rounded-3xl border border-base-300 bg-base-100 p-6 shadow-sm sm:p-10">
+        <h1 class="text-2xl font-bold">Ma liste de films</h1>
 
-        <label for="film">Nom du film :</label>
+        <label for="film" class="block text-sm font-medium text-gray-700">
+            Nom du film :
+        </label>
 
         <input
             id="film"
@@ -41,24 +43,27 @@
             placeholder="Exemple : Tutur 2 le retour "
             :value="nomFilm"
             @input="lireNomFilm"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         />
 
-        <button type="button" @click="ajouterFilm">
+        <button type="button" @click="ajouterFilm" class="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Ajouter le film
         </button>
 
         <ul 
             v-if="mesFilms.length > 0"
             v-show="visible"
+            class="mt-4 list-inside list-disc space-y-2"
         >
             <li
                 v-for="(film, index) in mesFilms"
                 :key="index"
+                class="text-base-content/70"
             >
 
                 <button
                     type="button"
-                    class="bouton-supprimer"
+                    class="bouton-supprimer text-blue-500 hover:underline"
                     @click="supprimerFilm(index)"
                 >
                     {{ film }} - Cliquez pour supprimer
@@ -66,13 +71,14 @@
             </li>
         </ul>
 
-        <p v-else>
+        <p v-else class="mt-4 p-4 bg-blue-100 text-blue-800">
             Votre liste est vide : ajoutez votre premier film !
         </p>
         <button 
             type="button"  
             @click="basculerListe"
             v-if="visible"
+            class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
             Masquer la liste
         </button>
@@ -80,107 +86,9 @@
             type="button"  
             @click="basculerListe"
             v-else
+            class="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
             Afficher la liste
         </button>
     </section>
 </template>
-
-<style scoped>
-    section {
-        max-width: 600px;
-        margin: 24px auto;
-        padding: 24px;
-        background: #ffffff;
-        color: #1f2937;
-        border: 1px solid #cbd5e1;
-        border-radius: 12px;
-        text-align: left;
-        line-height: 1.5;
-    }
-
-    h1 {
-        margin: 0 0 24px;
-        font-size: 1.6rem;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-    }
-
-    input,
-    button {
-        box-sizing: border-box;
-        width: 100%;
-        min-height: 44px;
-        padding: 12px;
-        font: inherit;
-        border-radius: 8px;
-    }
-
-    input {
-        background: white;
-        color: #1f2937;
-        border: 1px solid #64748b;
-    }
-
-    input::placeholder {
-        color: #64748b;
-        opacity: 1;
-    }
-
-    button {
-        margin-top: 12px;
-        background: #166534;
-        color: white;
-        border: 1px solid #166534;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #14532d;
-    }
-
-    input:focus-visible,
-    button:focus-visible {
-        outline: 3px solid #1d4ed8;
-        outline-offset: 3px;
-    }
-
-    ul {
-        margin-top: 24px;
-        padding-left: 24px;
-    }
-
-    li {
-        margin-bottom: 8px;
-        padding: 8px 12px;
-        background: #f0fdf4;
-        border-radius: 6px;
-        overflow-wrap: anywhere;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-    }
-
-    p {
-        margin-top: 24px;
-        padding: 12px;
-        background: #f1f5f9;
-        border-radius: 8px;
-    }
-    .bouton-supprimer {
-        width: auto;
-        margin-top: 0;
-        flex-shrink: 0;
-        background: #b91c1c;
-        border-color: #b91c1c;
-    }
-
-    .bouton-supprimer:hover {
-        background: #991b1b;
-    }
-</style>
