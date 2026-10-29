@@ -94,6 +94,18 @@ const router = createRouter({
             component: () => import('../views/lessons/lesson-emit.vue')
         },
         {
+            path: '/lessons/marked',
+            component: () => import('../views/lessons/lesson-lib-marked.vue')
+        },
+        {
+            path: '/lessons/pinia',
+            component: () => import('../views/lessons/lesson-lib-pinia.vue')
+        },
+        {
+            path: '/lessons/inline-templating',
+            component: () => import('../views/lessons/lesson-inline-templating.vue')
+        },
+        {
             path: '/exercices',
             component: () => import('../views/Exercices.vue')
         },
@@ -240,6 +252,10 @@ const router = createRouter({
         {
             path: '/corrections/emits',
             component: () => import('../views/corrections/exercice-emit.vue')
+        },
+        {
+            path: '/corrections/dashboard',
+            component: () => import('../views/corrections/tp-dashboard.vue')
         },
         {
             path: "/articles",
