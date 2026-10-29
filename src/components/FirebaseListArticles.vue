@@ -1,6 +1,14 @@
 <script setup>
     import { ref, onMounted } from "vue";
     import ArticleDataService from "../services/ArticleDataService";
+
+    defineProps({
+        canEdit: {
+            type: Boolean,
+            default: false,
+        },
+    });
+    
     // (Le script setup reste identique, car il contient la logique et non le style)
     const articles = ref([]);
     const loading = ref(true);
@@ -74,6 +82,7 @@
             timeStyle: "short",
         });
     };
+
     onMounted(loadArticles);
 </script>
 
@@ -101,7 +110,7 @@
             <div v-for="(article, index) in articles" :key="article.id"
                 class="card bg-base-200 shadow-xl border border-base-300 transition-shadow duration-300 hover:shadow-2xl">
                 <div class="card-body p-6">
-                    <div v-if="editArticleId === article.id">
+                    <div v-if="canEdit && editArticleId === article.id">
                         <h3 class="card-title text-2xl mb-4">Modifier l'Article</h3>
                         <div class="form-control mb-3">
                             <label class="label"><span class="label-text">Titre</span></label>
@@ -135,7 +144,7 @@
                             Publié le : {{ formatDate(article.timestamp) }}
                         </small>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary btn-sm" @click="startEditing(article)">
+                            <button v-if="canEdit" class="btn btn-primary btn-sm" @click="startEditing(article)">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -145,8 +154,11 @@
                                 </svg>
                                 Modifier
                             </button>
-                            <button class="btn btn-error btn-sm"
-                                @click="deleteArticle(article.id)">
+                            <button
+                                v-if="canEdit"
+                                class="btn btn-error btn-sm"
+                                @click="deleteArticle(article.id)"
+                            >
                                 Supprimer
                             </button>
                         </div>
