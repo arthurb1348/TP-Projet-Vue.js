@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-md p-4 md:p-8">
+  <div class="login-container mx-auto max-w-md p-4 md:p-8">
 
     <h1 class="text-3xl font-bold text-center mb-6 text-primary">
       Se Connecter
