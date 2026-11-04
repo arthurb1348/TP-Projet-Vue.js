@@ -1,5 +1,14 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "user": [
+    { "name": "Dupont", "prenom": "Jean", "mail": "jean.dupont@test.fr", "password": "J3an!Dupont2026" },
+    { "name": "Martin", "prenom": "Sophie", "mail": "sophie.martin@test.fr", "password": "S0ph1e*Martin" },
+    { "name": "Bernard", "prenom": "Lucas", "mail": "lucas.bernard@test.fr", "password": "Luc@s_Bernard9" },
+    { "name": "Thomas", "prenom": "Julie", "mail": "julie.thomas@test.fr", "password": "Jul1e#Thomas" },
+    { "name": "Petit", "prenom": "Thomas", "mail": "thomas.petit@test.fr", "password": "Th0m@s!Petit7" },
+    { "name": "Robert", "prenom": "Emma", "mail": "emma.robert@test.fr", "password": "Emm@$Robert" },
+    { "name": "Richard", "prenom": "Antoine", "mail": "antoine.richard@test.fr", "password": "Ant01ne_Rich" },
+    { "name": "Durand", "prenom": "Chloé", "mail": "chloe.durand@test.fr", "password": "Chl0e%Durand" },
+    { "name": "Dubois", "prenom": "Hugo", "mail": "hugo.dubois@test.fr", "password": "Hug0!Dubois" },
+    { "name": "Moreau", "prenom": "Léa", "mail": "lea.moreau@test.fr", "password": "Le@*Moreau1" }
+  ]
 }
