@@ -26,6 +26,9 @@ dist-ssr
 # Cypress secrets
 cypress.env.json
 
+# Vitest reports and artifacts
+.vitest/
+
 .env
 .env.*
 !.env.example
