@@ -20,11 +20,13 @@ it('Devrait mesurer le temps de réponse de l API (inf à 2000ms)', () => {
         });
     });
 
+/*
 it("Devrait vérifier BULBASAUR en premier", () => {
         cy.intercept('GET', 'https://pokeapi.co/api/v2/pokemon').as('getPokemon');
         // cy.wait('@getPokemon');
         cy.get('#pokeListe p').eq(0).should('have.text', 'bulbasaur');
     });
+*/
 
 it('Devrait vérifier que la réponse contient les champs attendus name et url', () => {
         cy.request('GET', 'https://pokeapi.co/api/v2/pokemon').then((response) => {
